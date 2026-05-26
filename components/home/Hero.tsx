@@ -26,12 +26,21 @@ export function Hero() {
           className="mt-10 md:mt-14 mb-14 md:mb-20 mx-auto w-[88%] md:w-[78%] max-w-4xl"
           aria-label="SUPDAWG!"
         >
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/supdawg-logo.svg"
-            alt="SUPDAWG!"
-            className="logo-shadow w-full h-auto block"
-          />
+          <div className="relative group logo-shadow">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/supdawg-logo.svg"
+              alt="SUPDAWG!"
+              className="block w-full h-auto transition-opacity duration-200 ease-out group-hover:opacity-0"
+            />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/supdawg-logo-alt.svg"
+              alt=""
+              aria-hidden="true"
+              className="absolute inset-0 w-full h-auto opacity-0 transition-opacity duration-200 ease-out group-hover:opacity-100"
+            />
+          </div>
         </motion.div>
 
         <motion.p
