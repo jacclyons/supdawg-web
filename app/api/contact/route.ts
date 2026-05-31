@@ -61,7 +61,11 @@ export async function POST(req: Request) {
   });
 
   if (error) {
-    return NextResponse.json({ error: "Couldn't send. Try again in a sec." }, { status: 502 });
+    console.error("[contact] Resend error:", error);
+    return NextResponse.json(
+      { error: `Couldn't send: ${error.message ?? "unknown error"}` },
+      { status: 502 }
+    );
   }
 
   return NextResponse.json({ ok: true });
