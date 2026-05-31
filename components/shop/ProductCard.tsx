@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ShoppingBag } from "lucide-react";
+import { ShoppingBag, ShoppingCart } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -16,7 +16,7 @@ export function ProductCard({ product }: { product: Product }) {
       whileHover={{ y: -4, rotate: -0.5, scale: 1.01 }}
       transition={{ type: "spring", stiffness: 300, damping: 18 }}
     >
-      <Card className="group bg-white">
+      <Card className="group bg-transparent">
         <Link href={`/shop/${product.slug}`} className="block">
           <div className="relative aspect-square bg-brand-cream overflow-hidden border-b-2 border-brand-dark">
             <Image
@@ -44,7 +44,7 @@ export function ProductCard({ product }: { product: Product }) {
           </div>
           <Button
             size="sm"
-            className="w-full"
+            className="w-full hover:bg-brand-purple"
             onClick={() =>
               add({
                 id: product.id,
@@ -55,7 +55,7 @@ export function ProductCard({ product }: { product: Product }) {
               })
             }
           >
-            <ShoppingBag className="h-4 w-4" />
+            <ShoppingCart className="h-4 w-4" />
             Add to Cart
           </Button>
         </div>

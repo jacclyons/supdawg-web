@@ -8,10 +8,10 @@ export default function Page() {
       <div className="absolute -top-20 -left-20 h-72 w-72 rounded-full bg-brand-pink/30 blur-3xl pointer-events-none" />
       <div className="absolute -bottom-20 -right-20 h-80 w-80 rounded-full bg-brand-purple/30 blur-3xl pointer-events-none" />
 
-      <div className="relative mx-auto max-w-2xl px-4 md:px-6 py-16 md:py-24">
+      <div className="relative mx-auto max-w-2xl px-4 md:px-6 py-12 md:py-18">
         <div className="text-center">
           <h1 className="mt-3 font-display text-5xl md:text-7xl leading-none">
-            Contact
+            Reach out!
           </h1>
         </div>
 

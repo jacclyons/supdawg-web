@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { Menu, ShoppingBag, X } from "lucide-react";
+import { Menu, ShoppingBag, ShoppingCart, X } from "lucide-react";
 import { Wordmark } from "./Wordmark";
 import { useCart, cartCount } from "@/lib/cart-store";
 import { cn } from "@/lib/utils";
@@ -42,7 +42,7 @@ export function Navbar() {
                   "px-4 py-2 rounded-full font-display uppercase text-md tracking-wide border-2 border-transparent transition-all",
                   active
                     ? "bg-brand-dark text-brand-cream"
-                    : "hover:bg-brand-pink/10 hover:border-brand-dark"
+                    : "hover:border-brand-dark"
                 )}
               >
                 {n.label}
@@ -55,9 +55,9 @@ export function Navbar() {
             type="button"
             onClick={openCart}
             aria-label="Open cart"
-            className="relative h-11 w-11 rounded-full border-2 border-brand-dark bg-white grid place-items-center shadow-[3px_3px_0_0_hsl(var(--brand-dark))] hover:translate-y-0.5 hover:translate-x-0.5 hover:shadow-[1px_1px_0_0_hsl(var(--brand-dark))] transition-all"
+            className="relative h-11 w-11 rounded-full border-2 border-brand-dark bg-transparent grid place-items-center shadow-[3px_3px_0_0_hsl(var(--brand-dark))] hover:translate-y-0.5 hover:translate-x-0.5 hover:shadow-[1px_1px_0_0_hsl(var(--brand-dark))] transition-all"
           >
-            <ShoppingBag className="h-5 w-5" />
+            <ShoppingCart className="h-5 w-5" />
             {count > 0 && (
               <span className="absolute -right-1 -top-1 h-5 min-w-5 rounded-full bg-brand-pink border-2 border-brand-dark text-[10px] text-white grid place-items-center px-1 font-bold">
                 {count}
@@ -68,7 +68,7 @@ export function Navbar() {
             type="button"
             onClick={() => setOpen((s) => !s)}
             aria-label="Toggle menu"
-            className="lg:hidden h-11 w-11 rounded-full border-2 border-brand-dark bg-white grid place-items-center shadow-[3px_3px_0_0_hsl(var(--brand-dark))]"
+            className="lg:hidden h-11 w-11 rounded-full border-2 border-brand-dark bg-transparent grid place-items-center shadow-[3px_3px_0_0_hsl(var(--brand-dark))]"
           >
             {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
@@ -85,7 +85,7 @@ export function Navbar() {
                 "block px-4 py-3 rounded-lg font-display uppercase text-sm tracking-wide border-2",
                 pathname === n.href
                   ? "bg-brand-dark text-brand-cream border-brand-dark"
-                  : "border-transparent hover:border-brand-dark hover:bg-white"
+                  : "border-transparent hover:border-brand-dark hover:bg-transparent"
               )}
             >
               {n.label}

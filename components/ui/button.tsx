@@ -14,7 +14,7 @@ const buttonVariants = cva(
         secondary:
           "bg-brand-purple text-white shadow-[4px_4px_0_0_hsl(var(--brand-dark))] hover:shadow-[2px_2px_0_0_hsl(var(--brand-dark))] hover:translate-y-0.5 hover:translate-x-0.5",
         outline:
-          "bg-brand-cream text-brand-dark shadow-[4px_4px_0_0_hsl(var(--brand-dark))] hover:bg-white hover:shadow-[2px_2px_0_0_hsl(var(--brand-dark))] hover:translate-y-0.5 hover:translate-x-0.5",
+          "bg-brand-cream text-brand-dark shadow-[4px_4px_0_0_hsl(var(--brand-dark))] hover:bg-transparent hover:shadow-[2px_2px_0_0_hsl(var(--brand-dark))] hover:translate-y-0.5 hover:translate-x-0.5",
         ghost:
           "border-transparent hover:bg-brand-pink/10 text-brand-dark active:translate-y-0",
         destructive:

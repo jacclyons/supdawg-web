@@ -14,7 +14,7 @@ export function Hero() {
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="inline-flex items-center gap-2 rounded-full border-2 border-brand-dark bg-white px-4 py-1.5 font-display uppercase text-sm tracking-wider shadow-[3px_3px_0_0_hsl(var(--brand-dark))]"
+          className="inline-flex items-center gap-2 rounded-full border-2 border-brand-dark bg-transparent px-4 py-1.5 font-display uppercase text-sm tracking-wider shadow-[3px_3px_0_0_hsl(var(--brand-dark))]"
         >
           Handmade in Alabama, shipped everywhere
         </motion.div>

@@ -1,7 +1,40 @@
 "use client";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { Minus, Plus, Trash2, ShoppingBag } from "lucide-react";
+import {
+  Minus,
+  Plus,
+  Trash2,
+  Snail,
+  Cat,
+  Dog,
+  Bird,
+  Rabbit,
+  Squirrel,
+  Turtle,
+  Worm,
+  HandMetal,
+  Heart,
+  Flower,
+  Trees,
+  Haze,
+} from "lucide-react";
+
+const EMPTY_ICONS = [
+  Snail,
+  Cat,
+  Dog,
+  Bird,
+  Rabbit,
+  Squirrel,
+  Turtle,
+  Worm,
+  HandMetal,
+  Heart,
+  Flower,
+  Trees,
+  Haze,
+];
 import {
   Sheet,
   SheetContent,
@@ -21,8 +54,13 @@ export function CartDrawer() {
   const setQty = useCart((s) => s.setQty);
   const [loading, setLoading] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const [emptyIconIdx, setEmptyIconIdx] = useState(0);
   useEffect(() => setMounted(true), []);
+  useEffect(() => {
+    if (isOpen) setEmptyIconIdx(Math.floor(Math.random() * EMPTY_ICONS.length));
+  }, [isOpen]);
   if (!mounted) return null;
+  const EmptyIcon = EMPTY_ICONS[emptyIconIdx];
 
   const total = cartTotalCents(items);
 
@@ -50,24 +88,23 @@ export function CartDrawer() {
   return (
     <Sheet open={isOpen} onOpenChange={(o) => (!o ? close() : null)}>
       <SheetContent className="bg-brand-cream border-l-2 border-brand-dark flex flex-col p-0 sm:max-w-md">
-        <SheetHeader className="px-6 pt-6 pb-4 border-b-2 border-brand-dark">
-          <SheetTitle className="font-display text-3xl">Your Bag</SheetTitle>
-          <SheetDescription className="text-brand-dark/70">
-            {items.length === 0 ? "Nothin' in here yet." : `${items.length} item(s) — let's stitch this up.`}
-          </SheetDescription>
+        <SheetHeader className="px-6 pt-6 pb-4 border-none">
+          <SheetTitle className="font-display text-3xl">yo <span className="text-brand-pink">cart</span></SheetTitle>
         </SheetHeader>
 
         <div className="flex-1 overflow-y-auto px-6 py-4 space-y-4">
           {items.length === 0 && (
             <div className="text-center py-12">
-              <ShoppingBag className="h-12 w-12 mx-auto text-brand-dark/30" />
-              <p className="mt-4 text-brand-dark/70">Empty for now. Go find something loud.</p>
+              <EmptyIcon
+              strokeWidth={1.25}
+              className="h-12 w-12 mx-auto text-brand-pink" />
+              <p className="mt-4 text-brand-dark/70">Empty... for now! mwhahaha</p>
             </div>
           )}
           {items.map((i) => (
             <div
               key={i.id}
-              className="flex gap-3 p-3 rounded-xl border-2 border-brand-dark bg-white"
+              className="flex gap-3 p-3 rounded-xl border-2 border-brand-dark bg-transparent"
             >
               <div className="relative h-20 w-20 shrink-0 rounded-lg overflow-hidden border-2 border-brand-dark">
                 <Image src={i.image_url} alt={i.name} fill sizes="80px" className="object-cover" />
@@ -79,7 +116,7 @@ export function CartDrawer() {
                   <button
                     onClick={() => setQty(i.id, i.quantity - 1)}
                     aria-label="Decrease"
-                    className="h-7 w-7 rounded-full border-2 border-brand-dark grid place-items-center bg-white hover:bg-brand-cream"
+                    className="h-7 w-7 rounded-full border-2 border-brand-dark grid place-items-center bg-transparent hover:bg-brand-cream"
                   >
                     <Minus className="h-3 w-3" />
                   </button>
@@ -87,14 +124,14 @@ export function CartDrawer() {
                   <button
                     onClick={() => setQty(i.id, i.quantity + 1)}
                     aria-label="Increase"
-                    className="h-7 w-7 rounded-full border-2 border-brand-dark grid place-items-center bg-white hover:bg-brand-cream"
+                    className="h-7 w-7 rounded-full border-2 border-brand-dark grid place-items-center bg-transparent hover:bg-brand-cream"
                   >
                     <Plus className="h-3 w-3" />
                   </button>
                   <button
                     onClick={() => remove(i.id)}
                     aria-label="Remove"
-                    className="ml-auto h-7 w-7 rounded-full border-2 border-brand-dark grid place-items-center bg-white hover:bg-brand-pink hover:text-white"
+                    className="ml-auto h-7 w-7 rounded-full border-2 border-brand-dark grid place-items-center bg-transparent hover:bg-brand-pink hover:text-cream"
                   >
                     <Trash2 className="h-3 w-3" />
                   </button>
@@ -105,7 +142,7 @@ export function CartDrawer() {
         </div>
 
         {items.length > 0 && (
-          <div className="border-t-2 border-brand-dark p-6 space-y-3 bg-white">
+          <div className="border-t-2 border-brand-dark p-6 space-y-3 bg-transparent">
             <div className="flex justify-between font-display text-xl">
               <span>Total</span>
               <span className="text-brand-pink">{formatPrice(total)}</span>
