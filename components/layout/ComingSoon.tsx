@@ -10,9 +10,6 @@ export function ComingSoon({
 }) {
   return (
     <div className="mx-auto max-w-3xl px-4 md:px-6 py-24 md:py-32 text-center">
-      <p className="font-display uppercase text-sm tracking-widest text-brand-pink">
-        Coming soon
-      </p>
       <h1 className="mt-3 font-display text-5xl md:text-7xl leading-none">{title}</h1>
       {description && (
         <p className="mt-6 text-lg text-brand-dark/80 max-w-prose mx-auto">
