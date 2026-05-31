@@ -26,7 +26,7 @@ export function Navbar() {
   const count = mounted ? cartCount(items) : 0;
 
   return (
-    <header className="sticky top-0 z-40 border-b-2 border-brand-dark bg-brand-cream/95 backdrop-blur">
+    <header className="sticky top-0 z-40 border-b-2 border-brand-dark bg-brand-cream">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:px-6">
         <Link href="/" aria-label="SUPDAWG home" className="shrink-0">
           <Wordmark size="md" />
