@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { Menu, ShoppingBag, ShoppingCart, X } from "lucide-react";
+import { Menu, ShoppingCart, X } from "lucide-react";
 import { Wordmark } from "./Wordmark";
 import { useCart, cartCount } from "@/lib/cart-store";
 import { cn } from "@/lib/utils";
@@ -59,7 +59,7 @@ export function Navbar() {
           >
             <ShoppingCart className="h-5 w-5" />
             {count > 0 && (
-              <span className="absolute -right-1 -top-1 h-5 min-w-5 rounded-full bg-brand-pink border-2 border-brand-dark text-[10px] text-white grid place-items-center px-1 font-bold">
+              <span className="absolute -right-1 -top-1 h-5 min-w-5 rounded-full bg-brand-pink border-2 border-brand-dark text-[10px] text-cream grid place-items-center px-1 font-bold">
                 {count}
               </span>
             )}

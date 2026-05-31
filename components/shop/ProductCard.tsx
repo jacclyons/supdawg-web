@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ShoppingBag, ShoppingCart } from "lucide-react";
+import { ShoppingCart } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -27,7 +27,7 @@ export function ProductCard({ product }: { product: Product }) {
               className="object-cover transition-transform duration-500 group-hover:scale-105"
             />
             {product.badge && (
-              <Badge className="absolute top-3 left-3 bg-brand-pink border-2 border-brand-dark text-white font-display tracking-wide rounded-full">
+              <Badge className="absolute top-3 left-3 bg-brand-pink border-2 border-brand-dark text-cream font-display tracking-wide rounded-full">
                 {product.badge}
               </Badge>
             )}
