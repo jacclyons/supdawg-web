@@ -5,7 +5,7 @@ import { z } from "zod";
 export const runtime = "nodejs";
 
 const TO_EMAIL = "supdawgcrafts@gmail.com";
-const FROM_EMAIL = "SUPDAWG Contact <onboarding@resend.dev>";
+const FROM_EMAIL = "SUPDAWG Contact <supdawg@kiroumelou.resend.app>";
 
 const ContactSchema = z.object({
   name: z.string().trim().min(1, "Name is required").max(100),
