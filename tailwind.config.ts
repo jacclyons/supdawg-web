@@ -60,7 +60,6 @@ const config: Config = {
   				purple: 'hsl(var(--brand-purple))',
   				dark: 'hsl(var(--brand-dark))',
   				cream: 'hsl(var(--brand-cream))',
-  				white: 'hsl(var(--brand-white))'
   			}
   		},
   		borderRadius: {

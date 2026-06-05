@@ -24,7 +24,7 @@ export function AboutTeaser() {
               className="object-cover"
             />
           </div>
-          <div className="absolute -top-4 -right-4 rotate-6 bg-brand-pink text-white px-4 py-2 rounded-full border-2 border-brand-dark font-display uppercase text-sm shadow-[4px_4px_0_0_hsl(var(--brand-dark))]">
+          <div className="absolute -top-4 -right-4 rotate-6 bg-brand-pink text-cream px-4 py-2 rounded-full border-2 border-brand-dark font-display uppercase text-sm shadow-[4px_4px_0_0_hsl(var(--brand-dark))]">
             Hi, I&apos;m Allie!
           </div>
         </motion.div>
@@ -35,9 +35,6 @@ export function AboutTeaser() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="space-y-5"
         >
-          <p className="font-display uppercase text-sm tracking-widest text-brand-pink-foreground/90">
-            About SUPDAWG!
-          </p>
           <h2 className="font-display text-4xl md:text-6xl leading-[0.95]">
             Every stitch by hand. <span className="text-brand-pink">No vibes harmed.</span>
           </h2>

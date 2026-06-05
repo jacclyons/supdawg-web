@@ -68,7 +68,7 @@ function FilterChip({
       className={cn(
         "px-4 h-10 rounded-full border-2 border-brand-dark font-display uppercase text-sm tracking-wide transition-all",
         active
-          ? "bg-brand-pink text-white shadow-[3px_3px_0_0_hsl(var(--brand-dark))]"
+          ? "bg-brand-pink text-cream shadow-[3px_3px_0_0_hsl(var(--brand-dark))]"
           : "bg-transparent hover:bg-brand-pink/10 shadow-[2px_2px_0_0_hsl(var(--brand-dark))]"
       )}
     >

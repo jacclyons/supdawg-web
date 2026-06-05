@@ -25,7 +25,7 @@ export function Footer() {
           <p className="font-display uppercase tracking-wide text-sm">Stay loud</p>
           <div className="flex gap-3">
             <a
-              href="https://instagram.com"
+              href="https://instagram.com/supdawgcrafts"
               target="_blank"
               rel="noreferrer"
               aria-label="Instagram"
