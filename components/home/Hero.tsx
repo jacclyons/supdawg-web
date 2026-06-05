@@ -49,7 +49,7 @@ export function Hero() {
           transition={{ delay: 0.7, duration: 0.5 }}
           className="mt-6 md:mt-10 mx-auto max-w-2xl font-display text-2xl md:text-4xl text-brand-dark"
         >
-          Handmade with hype.
+          Handmade with spunk.
         </motion.p>
         <motion.p
           initial={{ opacity: 0 }}

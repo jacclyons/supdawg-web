@@ -9,7 +9,7 @@ export function Footer() {
         <div className="space-y-3">
           <Wordmark size="md" />
           <p className="text-sm text-brand-cream/85 max-w-xs">
-            Handmade with hype by Allie Lyons. Patches, hoops, apparel — every
+            Handmade with spunk by Allie Lyons. Patches, hoops, apparel — every
             stitch by hand.
           </p>
         </div>

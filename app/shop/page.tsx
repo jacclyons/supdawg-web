@@ -3,7 +3,7 @@ import { SAMPLE_PRODUCTS } from "@/lib/sample-data";
 
 export const metadata = {
   title: "Shop — SUPDAWG!",
-  description: "Patches, hoops, apparel, and accessories — handmade with hype.",
+  description: "Patches, hoops, apparel, and accessories — handmade with spunk.",
 };
 
 export default function ShopPage() {

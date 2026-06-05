@@ -226,15 +226,9 @@ export function FaqContent() {
       <div className="absolute top-1/3 -right-24 h-80 w-80 rounded-full bg-brand-purple/30 blur-3xl pointer-events-none" />
 
       <section className="relative mx-auto max-w-3xl px-4 md:px-6 pt-14 md:pt-20 text-center">
-        <p className="font-display uppercase text-sm tracking-widest text-brand-purple">
-          Questions?
-        </p>
         <h1 className="mt-3 font-display text-5xl md:text-7xl leading-none">
           Frequently <span className="text-brand-pink">asked</span>
         </h1>
-        <p className="mt-5 text-lg text-brand-dark/80 max-w-prose mx-auto">
-          Everything you might want to know before you order. Tap a question to see the answer.
-        </p>
       </section>
 
       <div className="relative mx-auto max-w-3xl px-4 md:px-6 py-12 md:py-16 space-y-12">
