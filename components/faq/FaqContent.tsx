@@ -46,7 +46,7 @@ const groups: Group[] = [
       },
       {
         q: "Can I order matching items for a group?",
-        a: <>As a new business, we're currently not taking group orders. For further questions, please contact me at {email}.</>,
+        a: <>As a new business, we&apos;re currently not taking group orders. For further questions, please contact me at {email}.</>,
       },
       {
         q: "Can I choose where the design is placed?",
@@ -135,7 +135,7 @@ const groups: Group[] = [
       },
       {
         q: "Do you make items for weddings, baby showers, or other events?",
-        a: <>As a new business, we're currently not taking bigger orders. For related questions, please contact me at {email}.</>,
+        a: <>As a new business, we&apos;re currently not taking bigger orders. For related questions, please contact me at {email}.</>,
       },
     ],
   },
