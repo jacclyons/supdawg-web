@@ -9,13 +9,11 @@ export function Footer() {
         <div className="space-y-3">
           <Wordmark size="md" />
           <p className="text-sm text-brand-cream/85 max-w-xs">
-            Handmade with spunk by Allie Lyons. Patches, hoops, apparel — every
+            Handmade with spunk by Allie Lyons. Patches, hoops, apparel, every
             stitch by hand.
           </p>
         </div>
         <div className="grid grid-cols-2 gap-2 text-sm">
-          <Link href="/shop" className="hover:underline">Shop</Link>
-          <Link href="/custom-orders" className="hover:underline">Custom Orders</Link>
           <Link href="/gallery" className="hover:underline">Gallery</Link>
           <Link href="/about" className="hover:underline">About</Link>
           <Link href="/faq" className="hover:underline">FAQ</Link>
@@ -44,7 +42,7 @@ export function Footer() {
         </div>
       </div>
       <div className="border-t-2 border-brand-dark/30 py-4 text-center text-xs text-brand-cream/75">
-        © {new Date().getFullYear()} SUPDAWG! — Made in Alabama with thread and love ♡.
+        © {new Date().getFullYear()} SUPDAWG! Made in Alabama with thread and love ♡.
       </div>
     </footer>
   );

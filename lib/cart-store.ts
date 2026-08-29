@@ -14,6 +14,8 @@ export type CartItem = {
 type CartState = {
   items: CartItem[];
   isOpen: boolean;
+  /** Bumped each time the drawer opens, so the empty-state icon changes. */
+  openSeed: number;
   add: (item: Omit<CartItem, "quantity">, qty?: number) => void;
   remove: (id: string) => void;
   setQty: (id: string, qty: number) => void;
@@ -23,11 +25,14 @@ type CartState = {
   toggle: () => void;
 };
 
+const nextSeed = () => Math.floor(Math.random() * 1_000_000);
+
 export const useCart = create<CartState>()(
   persist(
     (set) => ({
       items: [],
       isOpen: false,
+      openSeed: 0,
       add: (item, qty = 1) =>
         set((s) => {
           const existing = s.items.find((i) => i.id === item.id);
@@ -37,9 +42,14 @@ export const useCart = create<CartState>()(
                 i.id === item.id ? { ...i, quantity: i.quantity + qty } : i
               ),
               isOpen: true,
+              openSeed: nextSeed(),
             };
           }
-          return { items: [...s.items, { ...item, quantity: qty }], isOpen: true };
+          return {
+            items: [...s.items, { ...item, quantity: qty }],
+            isOpen: true,
+            openSeed: nextSeed(),
+          };
         }),
       remove: (id) => set((s) => ({ items: s.items.filter((i) => i.id !== id) })),
       setQty: (id, qty) =>
@@ -49,9 +59,12 @@ export const useCart = create<CartState>()(
             .filter((i) => i.quantity > 0),
         })),
       clear: () => set({ items: [] }),
-      open: () => set({ isOpen: true }),
+      open: () => set({ isOpen: true, openSeed: nextSeed() }),
       close: () => set({ isOpen: false }),
-      toggle: () => set((s) => ({ isOpen: !s.isOpen })),
+      toggle: () =>
+        set((s) =>
+          s.isOpen ? { isOpen: false } : { isOpen: true, openSeed: nextSeed() }
+        ),
     }),
     { name: "supdawg-cart" }
   )

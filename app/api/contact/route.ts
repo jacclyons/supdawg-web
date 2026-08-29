@@ -21,7 +21,7 @@ const ContactSchema = z.object({
   email: z.string().trim().email("Valid email required").max(200),
   subject: z.string().trim().max(150).optional().default(""),
   message: z.string().trim().min(1, "Message is required").max(5000),
-  // Honeypot — bots fill hidden fields; humans don't.
+  // Honeypot: bots fill hidden fields, humans don't.
   website: z.string().max(0).optional(),
 });
 

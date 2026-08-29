@@ -34,7 +34,7 @@ export function AboutContent() {
         >
           <div className="relative aspect-[4/5] rounded-2xl border-2 border-brand-dark overflow-hidden shadow-[10px_10px_0_0_hsl(var(--brand-dark))] bg-brand-cream">
             <Image
-              src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1200&auto=format&fit=crop"
+              src="/allie.jpeg"
               alt="Allie at her embroidery station"
               fill
               sizes="(min-width:768px) 40vw, 90vw"
@@ -57,10 +57,23 @@ export function AboutContent() {
             My family consists of my pet bunny Tulip, my husband, and I. My husband, Jack,
             is my best friend and biggest supporter, and I thank the Lord for him every day!
           </p>
-          <p className="rounded-2xl border-2 border-brand-dark bg-brand-purple text-brand-cream px-5 py-4 shadow-[6px_6px_0_0_hsl(var(--brand-dark))]">
-            Tulip is our unofficial goobie of a mascot. She might not be a &ldquo;dawg,&rdquo;
-            but she sure does act like one sometimes!
-          </p>
+          <div className="relative">
+            <p className="rounded-2xl border-2 border-brand-dark bg-brand-purple text-brand-cream px-5 py-4 pr-24 sm:pr-28 shadow-[6px_6px_0_0_hsl(var(--brand-dark))]">
+              Tulip is our unofficial goobie of a mascot. She might not be a technical &ldquo;dawg,&rdquo;
+              but she is in our hearts!
+            </p>
+            <div className="pointer-events-none absolute -top-8 -right-3 sm:-right-6 w-24 sm:w-28 -rotate-6">
+              <div className="relative aspect-[4/5]">
+                <Image
+                  src="/allieandtulip.png"
+                  alt="Allie holding Tulip the bunny"
+                  fill
+                  sizes="120px"
+                  className="object-contain drop-shadow-[3px_3px_0_hsl(var(--brand-dark))]"
+                />
+              </div>
+            </div>
+          </div>
           <p>
             As we have been navigating the life of newlyweds, I have wanted to put my love
             for creation to use. Some of my hobbies are baking, gaming, and crafting! My love
@@ -127,7 +140,7 @@ export function AboutContent() {
         </p>
         <div className="flex flex-wrap justify-center gap-3">
           <Button asChild size="lg">
-            <Link href="/shop">Shop the creations</Link>
+            <Link href="/gallery">See the creations</Link>
           </Button>
           <Button asChild variant="outline" size="lg">
             <Link href="/contact">Say hi</Link>

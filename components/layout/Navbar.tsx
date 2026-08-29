@@ -1,15 +1,14 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Menu, ShoppingCart, X } from "lucide-react";
 import { Wordmark } from "./Wordmark";
 import { useCart, cartCount } from "@/lib/cart-store";
+import { useIsMounted } from "@/lib/use-is-mounted";
 import { cn } from "@/lib/utils";
 
 const NAV = [
-  { href: "/shop", label: "Shop" },
-  { href: "/custom-orders", label: "Custom" },
   { href: "/gallery", label: "Gallery" },
   { href: "/about", label: "About" },
   { href: "/faq", label: "FAQ" },
@@ -21,8 +20,7 @@ export function Navbar() {
   const [open, setOpen] = useState(false);
   const items = useCart((s) => s.items);
   const openCart = useCart((s) => s.open);
-  const [mounted, setMounted] = useState(false);
-  useEffect(() => setMounted(true), []);
+  const mounted = useIsMounted();
   const count = mounted ? cartCount(items) : 0;
 
   return (

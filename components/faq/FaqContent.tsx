@@ -34,7 +34,7 @@ const groups: Group[] = [
       },
       {
         q: "Can I see a proof or mockup before my order is made?",
-        a: "Yes — we'll send a digital proof for your approval before we begin stitching.",
+        a: "Yes! We'll send a digital proof for your approval before we begin stitching.",
       },
       {
         q: "Can I request a specific font or lettering style?",
@@ -59,7 +59,7 @@ const groups: Group[] = [
     items: [
       {
         q: "How is pricing determined for custom orders?",
-        a: "Pricing is based on design complexity, stitch count, item type, and quantity. Every custom order is quoted individually — reach out with your details for an estimate!",
+        a: "Pricing is based on design complexity, stitch count, item type, and quantity. Every custom order is quoted individually, so reach out with your details for an estimate!",
       },
       {
         q: "What payment methods do you accept?",
@@ -97,7 +97,7 @@ const groups: Group[] = [
       },
       {
         q: "How do I care for my embroidered items?",
-        a: "Turn the item inside out before washing. Use cold water on a gentle cycle and avoid bleach. Tumble dry on low or air dry. Avoid ironing directly over the embroidery — iron on the reverse side if needed.",
+        a: "Turn the item inside out before washing. Use cold water on a gentle cycle and avoid bleach. Tumble dry on low or air dry. Avoid ironing directly over the embroidery. Iron on the reverse side if needed.",
       },
       {
         q: "What sizes are available for embroidery designs?",
@@ -110,7 +110,7 @@ const groups: Group[] = [
     items: [
       {
         q: "What is your return policy?",
-        a: "For custom-made orders, we don't accept returns for change of mind. However, if there's an error on our end, we'll make it right — please review your proof carefully before approving. For pre-established items, we accept returns within 14 days of receiving your order. Refunds go back to the card or Venmo used.",
+        a: "For custom-made orders, we don't accept returns for change of mind. However, if there's an error on our end, we'll make it right, so please review your proof carefully before approving. For pre-established items, we accept returns within 14 days of receiving your order. Refunds go back to the card or Venmo used.",
       },
       {
         q: "What if my order arrives damaged or with an error?",
@@ -260,9 +260,6 @@ export function FaqContent() {
         <div className="flex flex-wrap justify-center gap-3">
           <Button asChild size="lg">
             <Link href="/contact">Contact us</Link>
-          </Button>
-          <Button asChild variant="outline" size="lg">
-            <Link href="/custom-orders">Start a custom order</Link>
           </Button>
         </div>
       </section>

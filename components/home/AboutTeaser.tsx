@@ -17,7 +17,7 @@ export function AboutTeaser() {
         >
           <div className="relative aspect-[4/5] rounded-2xl border-2 border-brand-dark overflow-hidden shadow-[10px_10px_0_0_hsl(var(--brand-dark))] bg-brand-cream">
             <Image
-              src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1200&auto=format&fit=crop"
+              src="/allie.jpeg"
               alt="Allie at her embroidery station"
               fill
               sizes="(min-width:768px) 40vw, 90vw"
@@ -41,7 +41,7 @@ export function AboutTeaser() {
           <p className="text-base md:text-lg text-brand-cream/90 max-w-prose">
             SUPDAWG! started as a sticker-pack-meets-sewing-circle side project and
             grew into a tiny studio of loud, lovable embroidery. Allie makes every
-            piece herself — no factories, no shortcuts, just a chunky thread and a
+            piece herself. No factories, no shortcuts, just a chunky thread and a
             big mood.
           </p>
           <Button asChild variant="outline" size="lg">

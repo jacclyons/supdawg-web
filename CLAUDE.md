@@ -21,3 +21,13 @@ The user is a non-technical solo founder building this app. Follow these rules i
 - **If something requires a one-time install** (Homebrew package, etc.), say so plainly and tell the user the exact command. Don't pretend it's already set up.
 - **One next step at a time.** Don't propose a 5-step roadmap unless asked.
 
+
+<!-- BEGIN:nextjs-agent-rules -->
+
+# This is NOT the Next.js you know
+
+This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
+
+This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
+
+<!-- END:nextjs-agent-rules -->

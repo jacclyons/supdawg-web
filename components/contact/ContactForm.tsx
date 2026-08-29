@@ -112,7 +112,7 @@ export function ContactForm() {
       onSubmit={handleSubmit}
       className="rounded-2xl border-2 border-brand-dark bg-transparent p-6 md:p-8 shadow-[6px_6px_0_0_hsl(var(--brand-dark))] space-y-5"
     >
-      {/* Honeypot — hidden from humans, bots will fill it. */}
+      {/* Honeypot: hidden from humans, bots will fill it. */}
       <div className="hidden" aria-hidden="true">
         <label>
           Website

@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import {
   Minus,
   Plus,
@@ -43,6 +43,7 @@ import {
 } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { useCart, cartTotalCents } from "@/lib/cart-store";
+import { useIsMounted } from "@/lib/use-is-mounted";
 import { formatPrice } from "@/lib/types";
 
 export function CartDrawer() {
@@ -51,15 +52,11 @@ export function CartDrawer() {
   const close = useCart((s) => s.close);
   const remove = useCart((s) => s.remove);
   const setQty = useCart((s) => s.setQty);
+  const openSeed = useCart((s) => s.openSeed);
   const [loading, setLoading] = useState(false);
-  const [mounted, setMounted] = useState(false);
-  const [emptyIconIdx, setEmptyIconIdx] = useState(0);
-  useEffect(() => setMounted(true), []);
-  useEffect(() => {
-    if (isOpen) setEmptyIconIdx(Math.floor(Math.random() * EMPTY_ICONS.length));
-  }, [isOpen]);
+  const mounted = useIsMounted();
   if (!mounted) return null;
-  const EmptyIcon = EMPTY_ICONS[emptyIconIdx];
+  const EmptyIcon = EMPTY_ICONS[(openSeed ?? 0) % EMPTY_ICONS.length];
 
   const total = cartTotalCents(items);
 
@@ -75,7 +72,7 @@ export function CartDrawer() {
       if (data.url) {
         window.location.href = data.url;
       } else {
-        alert(data.error || "Checkout isn't wired up yet — Stripe keys missing.");
+        alert(data.error || "Checkout isn't wired up yet. Stripe keys missing.");
       }
     } catch {
       alert("Couldn't start checkout. Try again in a sec.");

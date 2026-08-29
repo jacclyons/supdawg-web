@@ -68,12 +68,12 @@ export function Hero() {
           className="mt-8 md:mt-10 flex flex-wrap items-center justify-center gap-3"
         >
           <Button asChild size="lg">
-            <Link href="/shop">
-              Shop Now <ArrowRight className="h-4 w-4" />
+            <Link href="/gallery">
+              See the Gallery <ArrowRight className="h-4 w-4" />
             </Link>
           </Button>
           <Button asChild size="lg" variant="secondary">
-            <Link href="/custom-orders">Order Custom</Link>
+            <Link href="/contact">Get in Touch</Link>
           </Button>
         </motion.div>
       </div>

@@ -1,6 +1,6 @@
 import { ContactForm } from "@/components/contact/ContactForm";
 
-export const metadata = { title: "Contact — SUPDAWG!" };
+export const metadata = { title: "Contact | SUPDAWG!" };
 
 export default function Page() {
   return (

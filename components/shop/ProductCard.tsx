@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import Link from "next/link";
 import { motion } from "framer-motion";
 import { ShoppingCart } from "lucide-react";
 import { Card } from "@/components/ui/card";
@@ -17,7 +16,6 @@ export function ProductCard({ product }: { product: Product }) {
       transition={{ type: "spring", stiffness: 300, damping: 18 }}
     >
       <Card className="group bg-transparent">
-        <Link href={`/shop/${product.slug}`} className="block">
           <div className="relative aspect-square bg-brand-cream overflow-hidden border-b-2 border-brand-dark">
             <Image
               src={product.image_url}
@@ -32,12 +30,11 @@ export function ProductCard({ product }: { product: Product }) {
               </Badge>
             )}
           </div>
-        </Link>
         <div className="p-4 space-y-3">
           <div className="flex items-baseline justify-between gap-2">
-            <Link href={`/shop/${product.slug}`} className="font-display text-lg leading-tight hover:underline">
+            <span className="font-display text-lg leading-tight">
               {product.name}
-            </Link>
+            </span>
             <span className="font-display text-brand-pink text-lg shrink-0">
               {formatPrice(product.price_cents)}
             </span>

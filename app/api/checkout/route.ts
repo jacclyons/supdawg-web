@@ -30,8 +30,8 @@ export async function POST(req: Request) {
         product_data: { name: i.name, images: [i.image_url] },
       },
     })),
-    success_url: `${origin}/shop?checkout=success`,
-    cancel_url: `${origin}/shop?checkout=cancelled`,
+    success_url: `${origin}/?checkout=success`,
+    cancel_url: `${origin}/?checkout=cancelled`,
     shipping_address_collection: { allowed_countries: ["US", "CA"] },
   });
 

@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 
 export function CustomOrdersBanner() {
   return (
-    <section className="relative px-4 md:px-6 pb-20">
+    <section className="relative px-4 md:px-6 pt-12 md:pt-16 pb-20">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -21,13 +21,9 @@ export function CustomOrdersBanner() {
             <h2 className="font-display text-4xl md:text-6xl leading-[0.95]">
               Want something made just for you?
             </h2>
-            <p className="text-cream/90 text-base md:text-lg max-w-prose">
-              Drop your vision. Allie will stitch it up — patches, hoops,
-              apparel, weird little gifts. Turnaround is usually 2–3 weeks.
-            </p>
           </div>
           <Button asChild size="xl" variant="outline">
-            <Link href="/custom-orders">Start your order</Link>
+            <Link href="/contact">Start your order</Link>
           </Button>
         </div>
       </motion.div>

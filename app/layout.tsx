@@ -19,7 +19,7 @@ const body = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "SUPDAWG! — Handmade with spunk.",
+  title: "SUPDAWG! Handmade with spunk.",
   description:
     "Loud, lovable, handmade embroidery and crafts by Allie Lyons. Patches, hoop art, apparel, and one-of-one custom orders.",
   icons: {
