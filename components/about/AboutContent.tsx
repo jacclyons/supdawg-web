@@ -19,7 +19,7 @@ export function AboutContent() {
           Hi, I&apos;m <span className="text-brand-pink">Allie!</span>
         </h1>
         <p className="mt-5 text-lg text-brand-dark/80 max-w-prose mx-auto">
-          The official owner of SUPDAWG! Based in the small town of Hartselle, Alabama.
+          The owner of SUPDAWG!
         </p>
       </section>
 
@@ -75,15 +75,6 @@ export function AboutContent() {
             </div>
           </div>
           <p>
-            As we have been navigating the life of newlyweds, I have wanted to put my love
-            for creation to use. Some of my hobbies are baking, gaming, and crafting! My love
-            for this type of crafting came from a gift of an embroidery machine that wasn&apos;t
-            being used. After learning how to use this machine, I decided to pick up sewing
-            as well! My husband started an LLC with some friends, and I jokingly said
-            &ldquo;I can make some patches for y&apos;all!&rdquo; &hellip; Little did I know,
-            that was the start of the idea to bring this business to life!
-          </p>
-          <p>
             When I am not crafting or keeping up with life at home, Jack and I are involved
             in our local church in Decatur, AL! We stand firm in our faith and love to share
             the Gospel with others when we can. My goal with this business is to share the
@@ -95,32 +86,6 @@ export function AboutContent() {
             my customers the love that He shows me daily.
           </p>
         </motion.div>
-      </section>
-
-      {/* About Supdawg */}
-      <section className="relative bg-brand-purple text-brand-cream noise border-y-2 border-brand-dark">
-        <div className="mx-auto max-w-3xl px-4 md:px-6 py-14 md:py-20 space-y-5">
-          <h2 className="font-display text-4xl md:text-6xl leading-[0.95]">
-            What&apos;s up, <span className="text-brand-pink">dawg?</span>
-          </h2>
-          <p className="text-base md:text-lg text-brand-cream/90">
-            SUPDAWG! is a small, home-based business based out of Hartselle, AL. Our business
-            name comes from the phrase &ldquo;What&apos;s up, dawg?&rdquo;, a phrase that our
-            owner, Allie, tends to say a lot!
-          </p>
-          <p className="text-base md:text-lg text-brand-cream/90">
-            We share fun and meaningful creations that will bring our customers joy. We might
-            be silly, but we aim to give our best attention to our customers and their needs.
-            We work as effectively and diligently as possible and try to get orders out ASAP.
-            We focus on quality rather than quantity, putting our best effort and love into
-            our products.
-          </p>
-          <p className="text-base md:text-lg text-brand-cream/90">
-            SUPDAWG! offers many sizes of creations, ranging from patches and pins, to bags
-            and accessories, and even clothes! We want to offer products that appeal to
-            everyone!
-          </p>
-        </div>
       </section>
 
       {/* CTA */}

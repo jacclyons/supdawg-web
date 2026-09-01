@@ -9,14 +9,12 @@ export function Footer() {
         <div className="space-y-3">
           <Wordmark size="md" />
           <p className="text-sm text-brand-cream/85 max-w-xs">
-            Handmade with spunk by Allie Lyons. Patches, hoops, apparel, every
-            stitch by hand.
+            Digitizing logos, lettering, and artwork by Allie.
           </p>
         </div>
         <div className="grid grid-cols-2 gap-2 text-sm">
           <Link href="/gallery" className="hover:underline">Gallery</Link>
           <Link href="/about" className="hover:underline">About</Link>
-          <Link href="/faq" className="hover:underline">FAQ</Link>
           <Link href="/contact" className="hover:underline">Contact</Link>
         </div>
         <div className="space-y-3">

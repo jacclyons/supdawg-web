@@ -36,13 +36,11 @@ export function AboutTeaser() {
           className="space-y-5"
         >
           <h2 className="font-display text-4xl md:text-6xl leading-[0.95]">
-            Every stitch by hand. <span className="text-brand-pink">No vibes harmed.</span>
+            Designing with care. <span className="text-brand-pink">Your vision brought to life.</span>
           </h2>
           <p className="text-base md:text-lg text-brand-cream/90 max-w-prose">
-            SUPDAWG! started as a sticker-pack-meets-sewing-circle side project and
-            grew into a tiny studio of loud, lovable embroidery. Allie makes every
-            piece herself. No factories, no shortcuts, just a chunky thread and a
-            big mood.
+            SUPDAWG! Started as a side project and grew into a love for embroidery. After having
+            trouble finding the files required, I started making my own!
           </p>
           <Button asChild variant="outline" size="lg">
             <Link href="/about">Read the whole story</Link>
