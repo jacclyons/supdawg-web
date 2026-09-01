@@ -98,3 +98,27 @@
     transition: none;
   }
 }
+
+/* Printing the /billing page: hide the site chrome and the editor, keep only the document. */
+@media print {
+  @page {
+    size: letter;
+    margin: 0.6in;
+  }
+
+  body:has(#billing-print) * {
+    visibility: hidden;
+  }
+
+  body:has(#billing-print) #billing-print,
+  body:has(#billing-print) #billing-print * {
+    visibility: visible;
+  }
+
+  body:has(#billing-print) #billing-print {
+    position: absolute;
+    inset: 0 auto auto 0;
+    width: 100%;
+    background: #fff;
+  }
+}
